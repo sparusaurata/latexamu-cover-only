@@ -1,45 +1,15 @@
-## Compilation
+The [AMU LaTeX class for theses](https://github.com/SCD-Aix-Marseille-Universite/latexamu) is a full class based on KOMA-script, featuring all the mandatory frontmatter (cover, affidavit, etc.) together with many layout utilities. However, some people (*e.g.* me) use their own layout and just want to add the AMU mandatory cover. Extracting only the necessary material is the purpose of this fork. (AMU used to provided this, but inexplicably [removed their repo](https://github.com/SCD-Aix-Marseille-Universite/latexamu/commit/932ed73783eecf398449f7918023d689a52690e5).)
 
-Install [TeX Live](http://www.tug.org/texlive/acquire-netinstall.html) in the usual way.
+It contains :
+- a package `titre-preamble.sty` containing preliminary work to be included in your preamble,
+- a file `titre.tex` containing the cover,
+- the necessary fonts and logos,
+- a file `main.tex` that just produces a sample cover.
 
-compile with
-```bash
-pdflatex these
-biber these
-makeindex these
-makeglossaries these
-pdflatex these
-pdflatex these
+## How to use the sample `main.tex`
 
-makeindex these
-makeglossaries these
-pdflatex these
-```
+## How to include the cover to your thesis
 
-or use [Latexmk](https://mg.readthedocs.io/latexmk.html) and add the following lines to some .latexmkrc initialization file (already done in repo):
-```bash
-add_cus_dep('glo', 'gls', 0, 'run_makeglossaries');
-add_cus_dep('acn', 'acr', 0, 'run_makeglossaries');
+## License
 
-sub run_makeglossaries {
-  if ( $silent ) {
-    system "makeglossaries -q '$_[0]'";
-  }
-  else {
-    system "makeglossaries '$_[0]'";
-  };
-}
-$clean_ext = "acn acr alg glg glo gls nlg nlo ntn xdy run.xml not bbl";
-```
-then compile with
-```bash
-latexmk -pdf
-```
-and erase temp files with
-```bash
-latexmk -c
-```
-
-## Contributing
-
-[Bug reports and pull requests are welcome on GitHub](https://github.com/SCD-Aix-Marseille-Universite/latexamu).
+The material is distributed under the same conditions as [the original one](https://github.com/SCD-Aix-Marseille-Universite/latexamu). All the parts of it that are mine are distributed under the terms of the [WTFPL](http://www.wtfpl.net/).

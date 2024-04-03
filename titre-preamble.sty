@@ -2,39 +2,8 @@
 % Aix-Marseille Université <@univ-amu.fr>
 % Version 0.9 released 04/06/2020
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{amu_these}[2020/06/04 Classe personnelle, V0.9]
+\ProvidesPackage{titre-preamble}[2024/04/03 by AMU, edits by R.C.]
 
-%%% classe de base (KOMA-Script)
-\LoadClass{scrreprt}						%% classe report KOMA-Script
-\KOMAoptions{
-	paper=a4,								%% taille du papier
-	fontsize=12pt,							%% taille de la police
-	DIV=12,									%% taille des marges
-	BCOR=0mm,								%% taille de la reliure
-	twoside=off,							%% recto-verso
-	listof=totoc,							%% LOFT dans la TOC
-	index=totoc								%% index dans la TOC
-	}
-
-\RequirePackage{lipsum}						%% lorem ipsum (exemple)
-
-%%% extensions minimales
-\RequirePackage[utf8]{inputenc}				%% encodage du texte
-\RequirePackage[TS1,T1]{fontenc}			%% encodage des fontes
-%\RequirePackage{lmodern}					%% polices latines (désactivés)
-\RequirePackage{fourier}					%% polices Adobe Utopia (activés)
-\RequirePackage[english,main=french]{babel}	%% typographie (français par défaut)
-\RequirePackage[babel]{csquotes}			%% guillemets typographiques
-\MakeAutoQuote{«}{»}						%% espacement automatique des guillemets
-
-%%% typographie et mise en page
-\RequirePackage{scrhack}					%% macros personnalisées (KOMA-Script)
-\RequirePackage[
-	automark,								%% rappel du titre de chapître en en-tête
-	autooneside=false						%% nécessaire pour le rappel du chapître et de la partie en en-tête
-	]{scrlayer-scrpage}						%% en-tête/pied de page personnalisés (KOMA-Script)
-\RequirePackage{textcomp}					%% symboles complémentaires
-\RequirePackage{hyphenat}					%% césure explicite
 \RequirePackage{microtype}					%% microtypographie
 
 \RequirePackage[bottom=10em]{geometry}		%% réduit le bas de page pour pouvoir numéroter les pdf insérés (réduire plus si nécessaire)

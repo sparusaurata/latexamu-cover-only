@@ -41,5 +41,19 @@
 \newcommand\titsb[1]{{\usefont{T1}{tit}{sb}{n} #1 }}
 \newcommand\titb[1]{{\usefont{T1}{tit}{b}{n} #1 }}
 }{}
+% ... if we're using lualatex or xelatex with fontspec
+\@ifpackageloaded{fontspec}{
+\defaultfontfeatures{Path=./fonts/}
+\newfontface\tit@el{Titillium-ExtraLight.ttf}[Scale=1.1]
+\newfontface\tit@l{Titillium-Light.ttf}[Scale=1.1]
+\newfontface\tit@m{Titillium-Regular.ttf}[Scale=1.1]
+\newfontface\tit@sb{Titillium-SemiBold.ttf}[Scale=1.1]
+\newfontface\tit@b{Titillium-Bold.ttf}[Scale=1.1]
+\newcommand{\titel}[1]{{\tit@el #1}}
+\newcommand{\titl}[1]{{\tit@l #1}}
+\newcommand{\titm}[1]{{\tit@m #1}}
+\newcommand{\titsb}[1]{{\tit@sb #1}}
+\newcommand{\titb}[1]{{\tit@b #1}}
+}{}
 
 \makeatletter\newcommand\HUGE{\@setfontsize\Huge{28}{0}}\makeatother

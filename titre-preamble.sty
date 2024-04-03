@@ -17,27 +17,6 @@
 
 \graphicspath{{fig/}{logo/}}				%% chemins vers fichiers images
 
-%%% mathématiques, physique, chimie (à adapter)
-\RequirePackage{amsmath}					%% formules mathématiques
-\RequirePackage{amssymb}					%% symboles mathématiques
-\RequirePackage{amsfonts}					%% polices mathématiques
-
-\RequirePackage{xspace}						%% gestions des espaces dans les macros
-\RequirePackage{xparse}						%% macros avancées
-\RequirePackage{nicefrac}					%% fractions en ligne (voir aussi xfrac)
-\RequirePackage{siunitx}					%% unités du système international
-\sisetup{									%% options pour les unités
-	list-final-separator = { \translate{and} },	
-	list-pair-separator  = { \translate{and} },
-	output-decimal-marker = {,},
-	exponent-product = {\cdot},
-	separate-uncertainty = true
-	}
-\PassOptionsToPackage{version=4}{mhchem}
-\RequirePackage{mhchem}						%% chimie
-
-\RequirePackage{physics}					%% physique
-
 %%% PDF
 \RequirePackage{pdfpages}					%% insertion de pdf
 \RequirePackage{hyperref}					%% pdf interactifs (charger le package hyperref en dernier)

@@ -17,33 +17,7 @@
 
 \graphicspath{{fig/}{logo/}}				%% chemins vers fichiers images
 
-%%% PDF
-\RequirePackage{pdfpages}					%% insertion de pdf
 \RequirePackage{hyperref}					%% pdf interactifs (charger le package hyperref en dernier)
-
-\pdfminorversion=5							%% PDF en version 1.5
-\pdfobjcompresslevel 0						%% compression des objets
-\pdfcompresslevel 0							%% compression du PDF
-
-\hypersetup{
-	%backref=true,							%% ajout de liens (par défaut)
-	%pagebackref=true,						%% dans la bibliographie (par défaut)
-	%hyperindex=true,						%% dans l'index (par défaut)
-	%bookmarks=true,						%% signets Acrobat (par défaut)
-	breaklinks=true,						%% retour à la ligne (si lien trop long)
-	colorlinks=true,						%% colorise liens
-	urlcolor=blue,							%% couleur hyperliens
-	citecolor=blue,							%% couleur liens bibliographie
-	linkcolor=blue,							%% couleur liens internes
-	anchorcolor=blue,						%% couleur liens ancres
-	bookmarksopen=false,					%% signets repliés par défaut
-	linktocpage=false,						%% lien numéro de page dans TOC
-%% métadonnées :							%% ATTENTION à compléter
-	pdftitle={Titre},
-	pdfauthor={Prénom NOM},
-	pdfsubject={Résumé},
-	pdfkeywords = {mot clé, keyword, ...},
-	}
 
 %%% glossaires
 \RequirePackage[

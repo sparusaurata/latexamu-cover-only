@@ -34,13 +34,15 @@
 
 % Loads Titillium...
 % ... if we're using pdflatex with fontenc
-\@ifpackageloaded{fontenc}{
+% (for some reason \@ifpackageloaded did not work)
+\RequirePackage{iftex}
+\ifpdftex
 \newcommand\titel[1]{{\usefont{T1}{tit}{el}{n} #1 }}
 \newcommand\titl[1]{{\usefont{T1}{tit}{l}{n} #1 }}
 \newcommand\titm[1]{{\usefont{T1}{tit}{m}{n} #1 }}
 \newcommand\titsb[1]{{\usefont{T1}{tit}{sb}{n} #1 }}
 \newcommand\titb[1]{{\usefont{T1}{tit}{b}{n} #1 }}
-}{}
+\else\fi
 % ... if we're using lualatex or xelatex with fontspec
 \@ifpackageloaded{fontspec}{
 \defaultfontfeatures{Path=./fonts/}

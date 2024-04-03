@@ -1,12 +1,11 @@
-add_cus_dep('glo', 'gls', 0, 'run_makeglossaries');
-add_cus_dep('acn', 'acr', 0, 'run_makeglossaries');
+# Utiliser XeLaTeX
+$dvi_mode = 0;
+$postscript_mode = 0;
+$pdf_mode = 5;
 
-sub run_makeglossaries {
-  if ( $silent ) {
-    system "makeglossaries -q '$_[0]'";
-  }
-  else {
-    system "makeglossaries '$_[0]'";
-  };
-}
-$clean_ext = "acn acr alg glg glo gls nlg nlo ntn xdy run.xml not bbl";
+# Chercher les fichiers au bon endroit
+ensure_path('TEXINPUTS', './/');
+
+# Exécuter main.tex par défaut
+@default_files = ('main.tex');
+

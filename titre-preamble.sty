@@ -32,9 +32,14 @@
       mark=between positions 0 and 1 step 2*#2
       with {\node[color=black!50, fill, circle, minimum width=#2, inner sep=0pt, anchor=south west] {};}},postaction={decorate}] (0, #1) -- ++(0,#3);}}
 
+% Loads Titillium...
+% ... if we're using pdflatex with fontenc
+\@ifpackageloaded{fontenc}{
 \newcommand\titel[1]{{\usefont{T1}{tit}{el}{n} #1 }}
 \newcommand\titl[1]{{\usefont{T1}{tit}{l}{n} #1 }}
 \newcommand\titm[1]{{\usefont{T1}{tit}{m}{n} #1 }}
 \newcommand\titsb[1]{{\usefont{T1}{tit}{sb}{n} #1 }}
 \newcommand\titb[1]{{\usefont{T1}{tit}{b}{n} #1 }}
+}{}
+
 \makeatletter\newcommand\HUGE{\@setfontsize\Huge{28}{0}}\makeatother

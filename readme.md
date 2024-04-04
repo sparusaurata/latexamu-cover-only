@@ -22,7 +22,7 @@ In case you really want to use `pdflatex` (why would you?), you just need to mod
 - commenting the line loading `fontsetup`,
 - uncommenting the block loading fonts and Unicode support for `pdflatex`.
 
-# How to include the cover to your thesis
+# How to include the cover in your thesis
 
 1. Download (or clone) this repository in the folder where you are writing your thesis.  
 In case you are working in a git repository, you can also [add it as a submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).

@@ -4,6 +4,13 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{titre-preamble}[2024/04/03 by AMU, edits by R.C.]
 
+\newcommand\@@fontpath{./latexamu-cover-only/fonts/}
+\RequirePackage{xkeyval}
+\DeclareOptionX{fontpath}{
+	\renewcommand\@@fontpath{#1}
+}
+\ProcessOptionsX
+
 \RequirePackage{microtype}					%% microtypographie
 
 \RequirePackage{geometry}
@@ -45,7 +52,7 @@
 \else\fi
 % ... if we're using lualatex or xelatex with fontspec
 \@ifpackageloaded{fontspec}{
-\defaultfontfeatures{Path=./fonts/}
+\defaultfontfeatures{Path=\@@fontpath}
 \newfontface\tit@el{Titillium-ExtraLight.ttf}[Scale=1.1]
 \newfontface\tit@l{Titillium-Light.ttf}[Scale=1.1]
 \newfontface\tit@m{Titillium-Regular.ttf}[Scale=1.1]

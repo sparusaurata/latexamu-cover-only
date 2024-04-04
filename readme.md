@@ -43,6 +43,6 @@ In case you are working in a git repository, you can also [add it as a submodule
     ```
     (again, adapt the path if necessary).
 
-## License
+# License
 
 The forked material is distributed under the same conditions as [the original one](https://github.com/SCD-Aix-Marseille-Universite/latexamu). All the parts of this repo that are mine are distributed under the terms of the [WTFPL](http://www.wtfpl.net/).

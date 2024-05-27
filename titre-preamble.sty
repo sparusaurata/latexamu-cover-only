@@ -15,7 +15,7 @@
 
 \RequirePackage{geometry}
 \RequirePackage{setspace}					%% modification de l'interligne
-\RequirePackage{fancyhdr}
+\@ifpackageloaded{scrlayer-scrpage}{}{\RequirePackage{fancyhdr}}
 
 \RequirePackage{graphicx}					%% graphiques et figures
 
